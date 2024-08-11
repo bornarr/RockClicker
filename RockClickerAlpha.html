@@ -1,0 +1,142 @@
+<html>
+<style>
+<meta charset="UTF-8">
+<body> 
+    
+    font-size: 30px;
+</body>
+</style>
+<p style="text-align:center;">
+<body background="C:\Users\ZRS\Downloads\bvc.png">
+<div id="score" style="color:white;text-align:center;"><p style="color:white">0</p></div>
+<div id="button" style="text-align:center;"> <img width="208" height="208" src="C:\Users\ZRS\Downloads\buttonr.png" alt="click"> </div>
+<script>
+  var counter = 0;
+  var cps = 1;
+  document.getElementById('button').onclick = () => {
+    counter = counter + cps;
+    document.getElementById('score').innerText = counter;
+  };
+</script>
+</p>
+</p>
+<p style="text-align: right;">
+<strong style="color: white;">Powerups:</strong>
+<strong style="color: white;">
+<div id="StoneHammer" style="text-align:right;"><img width="64" height="64" src="C:\Users\ZRS\Downloads\StoneHammer.png" alt = "Stone Hammer">
+    <strong>2X Cps for 2 minute
+          Cost : 100
+</strong> 
+ <script>
+        document.getElementById('StoneHammer').onclick = () => {
+        
+            if (counter > 100) {
+             counter = counter - 100;
+             cps = cps * 2;
+             function CpsStoneReturn(){
+                 cps = cps/2
+            }
+            setTimeout(CpsStoneReturn,60000)
+            document.getElementById('score').innerText = counter;}
+        };
+        
+        
+    </script>
+<div id="BronzeHammer" style="text-align:right;"><img width="64" height="64" src="C:\Users\ZRS\Downloads\BronzeHammer.png" alt = "Stone Hammer">
+    <strong> 3X Cps  for 1 minute
+          Cost : 500
+</strong>
+<script>
+        document.getElementById('BronzeHammer').onclick = () => {
+        if (counter > 500) {
+            counter = counter - 500;
+            cps = cps * 3;
+            function CpsBronzeReturn(){
+                cps = cps/3
+            }
+            setTimeout(CpsBrozneReturn,120000)
+            document.getElementById('score').innerText = counter;}
+              
+            };
+        
+    </script>
+<div id="DiamondHammer" style="text-align:right;"><img width="64" height="64" src="C:\Users\ZRS\Downloads\DiamondHammer.png" alt = "Stone Hammer">
+    <strong>3X Cps for 2 minutes
+            Cost : 1500
+    </strong>
+    <script>
+        document.getElementById('DiamondHammer').onclick = () => {
+        if (counter > 1500) {
+            counter = counter - 1500;
+            cps = cps * 3;
+            function CpsDiamondReturn(){
+                cps = cps/3
+            }
+            setTimeout(CpsDiamondReturn,240000)
+            document.getElementById('score').innerText = counter;}
+              
+            };
+        
+    </script>
+</strong>
+</p>
+<p style="text-align:center;">
+
+<strong style="color:white;text-align:center">Upgrades:</strong>
+
+
+<div id="upg1" style="text-align:center;"><img width="64" height="64" src="C:\Users\ZRS\Downloads\Rock2.png" alt="click"><strong style="color:white;text-align:center">Cracked Rock</strong> </div>
+<script>
+    document.getElementById('upg1').onclick = () => {
+    if (counter > 50) {
+        cps = cps + 1;
+        counter = counter - 50;
+        document.getElementById('score').innerText = counter;}
+          
+        };
+    
+</script>
+<div id="upg2" style="text-align:center;"> <img width="64" height="64" src="C:\Users\ZRS\Downloads\Rock3.png" alt="click"><strong style="color:white;text-align:center">Granite</strong></div>
+<script>
+    document.getElementById('upg2').onclick = () => {
+    if (counter > 100) {
+        cps = cps + 2;
+        counter = counter - 100;
+        document.getElementById('score').innerText = counter;}
+          
+        };
+    </script>
+
+<div id="upg3" style="text-align:center;"> <img width="64" height="64" src="C:\Users\ZRS\Downloads\Rock4.png" alt="click"><strong style="color:white;text-align:center">Quartz</strong></div>
+<script>
+    document.getElementById('upg3').onclick = () => {
+    if (counter > 250) {
+        cps = cps + 5;
+        counter = counter - 250;
+        document.getElementById('score').innerText = counter;}
+          
+        };
+    </script>
+
+<div id="upg4" style="text-align:center;"> <img width="64" height="64" src="C:\Users\ZRS\Downloads\Rock5.png" alt="click"><strong style="color:white;text-align:center">Lava rock</strong></div>
+<script>
+    document.getElementById('upg4').onclick = () => {
+    if (counter > 500) {
+        cps = cps + 20;
+        counter = counter - 500;
+        document.getElementById('score').innerText = counter;}
+          
+        };
+    </script>
+
+<div id="upg5" style="text-align:center;"> <img width="64" height="64" src="C:\Users\ZRS\Downloads\Rock6.png" alt="click"><strong style="color:white;text-align:center">Emerald</strong></div>
+<script>
+    document.getElementById('upg5').onclick = () => {
+    if (counter > 1000) {
+        cps = cps + 50;
+        counter = counter - 1000;
+        document.getElementById('score').innerText = counter;}
+          
+        };
+    </script>
+</html>
